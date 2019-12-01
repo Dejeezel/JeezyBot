@@ -16,7 +16,7 @@ var spawningMechanics = {
             cantidadUpgraders = 1
         }
         var cantidadBuilders = 1;
-        if(_spawn.room.controller.level < 4) cantidadBuilders = 2;
+        if(_spawn.room.controller.level <= 4) cantidadBuilders = 2;
         if(_spawn.room.controller.level < 3) cantidadBuilders = 3;
         var cantidadHarvesters = 1;
         var reserveExits = _.map(Game.map.describeExits(_spawn.room.name), exit => exit);
