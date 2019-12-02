@@ -1,14 +1,16 @@
 var defensiveMechanics = {
     run: function(room){
+        const rampartsMinHp = 10000;
+        const containerMinHp = 6000;
         var hostiles = room.find(FIND_HOSTILE_CREEPS);
         var damagedFriendlies = _.filter(room.find(FIND_MY_CREEPS), creep => creep.hits < creep.hitsMax);
         var structs = room.find(FIND_STRUCTURES);
         var towers = _.filter(structs, struct => struct.structureType == STRUCTURE_TOWER);
         towers = _.filter(towers, tower => tower.energy > 10);
         var ramparts = _.filter(structs, struct => struct.structureType == STRUCTURE_RAMPART);
-        ramparts = _.filter(ramparts, rampart => rampart.hits < 10000);
+        ramparts = _.filter(ramparts, rampart => rampart.hits < rampartsMinHp);
         var containers = _.filter(structs, struct => struct.structureType == STRUCTURE_CONTAINER);
-        containers = _.filter(containers, container => container.hits < 6000);
+        containers = _.filter(containers, container => container.hits < containerMinHp);
         var roads = _.filter(structs, struct => struct.structureType == STRUCTURE_ROAD);
         roads = _.filter(roads, road => road.hits <= (road.hitsMax - 600));
         if(towers.length == 0 && hostiles.length > 0){
