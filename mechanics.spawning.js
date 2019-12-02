@@ -109,6 +109,12 @@ var spawningMechanics = {
             if(energyNow >= 700 ){
                 bodyFinal = bodyFinal.concat([WORK,MOVE]);
             }
+            if(energyNow >= 800 ){
+                bodyFinal = bodyFinal.concat([WORK,MOVE]);
+            }
+            if(energyNow >= 900 ){
+                bodyFinal = bodyFinal.concat([WORK,MOVE]);
+            }
             return bodyFinal;
         }
         function meleeBody(){
