@@ -208,6 +208,45 @@ var mechanicsConstruct = {
                                 roomie.createConstructionSite(areaStart.x + 8, areaStart.y + 9, STRUCTURE_EXTENSION);
                             }
                         }
+                        if(i == 5){
+                            roomie.createConstructionSite(areaStart.x + 3, areaStart.y + 9, STRUCTURE_TOWER);
+                            if(towers.length > 1){
+                                roomie.createConstructionSite(areaStart.x + 0, areaStart.y + 10, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 0, areaStart.y + 11, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 1, areaStart.y + 11, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 2, areaStart.y + 10, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 6, areaStart.y + 10, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 7, areaStart.y + 11, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 8, areaStart.y + 11, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 8, areaStart.y + 10, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 1, areaStart.y + 12, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 7, areaStart.y + 12, STRUCTURE_EXTENSION);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 8, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 9, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 10, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 11, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 11, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 12, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 13, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 14, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 1, areaStart.y + 7, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 0, areaStart.y + 8, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 5, areaStart.y + 7, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 6, areaStart.y + 7, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 7, areaStart.y + 7, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 8, areaStart.y + 8, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 3, areaStart.y + 10, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 2, areaStart.y + 11, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 1, areaStart.y + 10, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 5, areaStart.y + 11, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 6, areaStart.y + 11, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 7, areaStart.y + 10, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 3, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 2, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 1, STRUCTURE_ROAD);
+                                roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 0, STRUCTURE_ROAD);
+                            }
+                        }
                     }
              }
              else if(isMissingConstructions() && layout == 3){
