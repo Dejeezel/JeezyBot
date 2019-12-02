@@ -1,0 +1,11 @@
+Dreiken bot for Screeps game
+
+TODO List for 1.0
+
+Auto construction till level 8 for 3 different layouts
+More sotisficated defense mechanism (able to defend against most players)
+Reworked creep movement making it less CPU intensive
+Boosting creeps and lab management
+Auto resource gathering and factory management
+Automatic invader lairs detection, termination, and looting
+Automatic easy player target detection, termination, and looting
