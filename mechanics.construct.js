@@ -40,7 +40,7 @@ var mechanicsConstruct = {
                     var i = 3;
                     var j = 3;
                     var possibleAreas = [];
-                    const areaNumber = 13;
+                    const areaNumber = 12;
                     for(i = 3; j < (47 - areaNumber); i++){
                         let area = roomie.lookForAtArea(LOOK_TERRAIN, j, i, (j+areaNumber), (i+areaNumber), true);
                         let areaFiltered = _.filter(area, x => x.terrain == 'wall');

@@ -36,6 +36,7 @@ var spawningMechanics = {
         var haulers = _.filter(Game.creeps, (creep) => creep.memory.role == 'hauler' && creep.memory.homeRoom == _spawn.room.name);
         var remoteHaulers = _.filter(haulers, rHauler => rHauler.memory.remote == true);
         var reservers = _.filter(Game.creeps, (creep) => creep.memory.role == 'reserver' && creep.memory.homeRoom == _spawn.room.name);
+        var realUpgraders = _.filter(Game.creeps, creep => creep.memory.role == 'harvester' && creep.memory.homeRoom == _spawn.room.name && creep.memory.remote == undefined && creep.memory.isAlwaysUpgrading);
         var upgraders = _.filter(Game.creeps, creep => creep.memory.role == 'harvester' && creep.memory.homeRoom == _spawn.room.name && creep.memory.isAlwaysUpgrading);
         var innerHaulers = _.filter(Game.creeps, creep => creep.memory.role == 'innerHauler' && creep.memory.homeRoom == _spawn.room.name);
         var robberHaulers = _.filter(Game.creeps, (creep) => creep.memory.role == 'robberHauler');
@@ -109,10 +110,10 @@ var spawningMechanics = {
             if(energyNow >= 700 ){
                 bodyFinal = bodyFinal.concat([WORK,MOVE]);
             }
-            if(energyNow >= 800 ){
+            if(energyNow >= 850 ){
                 bodyFinal = bodyFinal.concat([WORK,MOVE]);
             }
-            if(energyNow >= 900 ){
+            if(energyNow >= 1000 ){
                 bodyFinal = bodyFinal.concat([WORK,MOVE]);
             }
             return bodyFinal;
@@ -182,7 +183,7 @@ var spawningMechanics = {
             var newName = 'Hauler' + Game.time;
             _spawn.spawnCreep(haulerBody(20), newName, { memory: {role: 'hauler' , homeRoom: _spawn.room.name}});
         }
-        if(upgraders.length < cantidadUpgraders){
+        if(realUpgraders.length < cantidadUpgraders){
             var newName = 'Upgrader' + Game.time;
             _spawn.spawnCreep(upgraderBody(20), newName, { memory: { role: 'harvester', homeRoom: _spawn.room.name, isAlwaysUpgrading: true}});
         }
@@ -195,7 +196,7 @@ var spawningMechanics = {
                     var newName = 'RemoteBuilder' + Game.time;
                     _spawn.spawnCreep([WORK,CARRY,MOVE,MOVE], newName, { memory: { role: 'builder', homeRoom: _spawn.room.name, remoteRoom: roomsWeCanHelp[i].name, remote: true}});
                 }
-                if(_remoteUpgraders.length < 1 && roomsWeCanHelp[i].controller.level == 1){
+                if(_remoteUpgraders.length < 1){
                     var newName = 'RemoteUpgrader' + Game.time;
                     _spawn.spawnCreep([WORK,CARRY,MOVE,MOVE], newName, { memory: { role: 'harvester', isAlwaysUpgrading: true, homeRoom: _spawn.room.name, remoteRoom: roomsWeCanHelp[i].name, remote: true}});
                 }
