@@ -107,7 +107,7 @@ var spawningMechanics = {
         
         function minerBody(){
             let bodyFinal = [WORK,WORK,WORK,WORK,CARRY,MOVE,MOVE];
-            if(energyNow < 500 && maxEnergy <= 500){
+            if(energyNow < 550 && maxEnergy <= 550){
                 bodyFinal = [WORK,WORK,CARRY,MOVE];
                 return bodyFinal;
             }
