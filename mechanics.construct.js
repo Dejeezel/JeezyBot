@@ -247,6 +247,21 @@ var mechanicsConstruct = {
                                 roomie.createConstructionSite(areaStart.x + 4, areaStart.y + 0, STRUCTURE_ROAD);
                             }
                         }
+                    if(i == 6){
+                            roomie.createConstructionSite(areaStart.x + 5, areaStart.y + 10, STRUCTURE_TERMINAL);
+                            roomie.createConstructionSite(areaStart.x + 1, areaStart.y + 2, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 2, areaStart.y + 1, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 7, areaStart.y + 2, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 6, areaStart.y + 1, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 6, areaStart.y + 0, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 7, areaStart.y + 0, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 8, areaStart.y + 0, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 8, areaStart.y + 1, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 8, areaStart.y + 2, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 2, areaStart.y + 13, STRUCTURE_EXTENSION);
+                            roomie.createConstructionSite(areaStart.x + 2, areaStart.y + 2, STRUCTURE_ROAD);
+                            roomie.createConstructionSite(areaStart.x + 6, areaStart.y + 2, STRUCTURE_ROAD);
+                        }
                     }
              }
              else if(isMissingConstructions() && layout == 3){
